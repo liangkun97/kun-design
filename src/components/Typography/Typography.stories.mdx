@@ -1,0 +1,35 @@
+import { Meta, Typeset } from "@storybook/addon-docs/blocks";
+import { typography } from "../../shared/styles";
+
+<Meta title="通用 /Typography 排版" />
+
+# Typography 排版
+
+文本的基本格式。
+
+# 何时使用
+
+- 当需要展示标题、段落、列表内容时使用，如文章/博客/日志的文本样式。
+
+- 当需要一列基于文本的基础操作时，如拷贝/省略/可编辑。
+
+# 演示
+
+**Font:** Nunito Sans
+
+**Weights:** 400(regular), 700(bold), 800(extrabold), 900(black)
+
+<Typeset
+  fontSizes={[
+    Number(typography.size.s1),
+    Number(typography.size.s2),
+    Number(typography.size.s3),
+    Number(typography.size.m1),
+    Number(typography.size.m2),
+    Number(typography.size.m3),
+    Number(typography.size.l1),
+    Number(typography.size.l2),
+    Number(typography.size.l3),
+  ]}
+  fontWeight={typography.weight.black}
+/>
