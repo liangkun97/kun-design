@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "outDir": "dist",
     "target": "es5",
     "lib": [
       "dom",
@@ -7,6 +8,7 @@
       "esnext"
     ],
     "baseUrl": ".",
+		"declaration": true,
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -18,16 +20,13 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "paths": {
-      "@/*": ["./src/*"],
-    }
+    "jsx": "react-jsx"
   },
   "include": [
-    "src"
+    "./src"
   ],
   "exclude": [
-    "src/__test__"
+    "./src/**/*.stories.tsx",
+    "./src/**/*.test.tsx"
   ],
 }

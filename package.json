@@ -1,11 +1,16 @@
 {
   "name": "kun-design",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.1",
+  "license": "MIT",
+  "private": false,
+  "author": {
+    "name": "liangkun97",
+    "email": "6765254@qq.com"
+  },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.4.0",
     "@types/node": "^16.11.19",
     "@types/react": "^17.0.38",
@@ -18,7 +23,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "tsc -p tsconfig.json",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
@@ -41,17 +46,24 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
+      "> 0.5%",
+      "last 2 versions",
+      "Firefox ESR",
       "not dead",
-      "not op_mini all"
+      "IE 11",
+      "not IE 10"
     ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
     ]
+    
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
     "@storybook/addon-a11y": "^6.4.13",
     "@storybook/addon-actions": "^6.4.13",
     "@storybook/addon-essentials": "^6.4.13",
@@ -76,5 +88,10 @@
     "styled-components": "^5.3.3",
     "typescript": "^4.5.4",
     "webpack": "^5.66.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+		"react-dom": ">=16.8.0",
+		"styled-components": "^5.1.1"
   }
 }

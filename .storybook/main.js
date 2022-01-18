@@ -20,8 +20,7 @@ module.exports = {
   "core": {
     "builder": "webpack5"
   },
-  webpackFinal: async (config) => {
-    config.devtool = "source-map";
+  // webpackFinal: async (config) => {
 		// config.module.rules.push({
 		// 	test: /\.(ts|tsx)$/,
 		// 	use: [
@@ -31,10 +30,6 @@ module.exports = {
 		// 	],
 		// });
 		// config.resolve.extensions.push(".ts", ".tsx");
-    config.resolve.alias = {
-      '@': path.resolve(__dirname, '../src'),
-      // '@shared': path.resolve(__dirname, '../src/shared')
-    }
-		return config;
-	},
+		// return config;
+	// },
 }

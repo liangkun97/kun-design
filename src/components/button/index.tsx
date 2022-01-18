@@ -7,8 +7,8 @@ import React, {
 } from "react";
 import styled from "styled-components";
 import { darken, rgba, opacify } from "polished";
-import { color, typography } from "@/shared/styles";
-import { easing } from "@/shared/animation";
+import { color, typography } from "../../shared/styles";
+import { easing } from "../../shared/animation";
 
 export type AppearancesTypes = keyof typeof APPEARANCES;
 
