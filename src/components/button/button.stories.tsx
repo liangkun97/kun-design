@@ -18,7 +18,7 @@ export const knobsBtn = () => (
     isLoading={boolean("isLoading", false)}
     disabled={boolean("disabled", false)}
     appearance={select<AppearancesTypes>("APPEARANCES", APPEARANCES, APPEARANCES.primary)}
-    onClick={() => action("hehehehe")}
+    onClick={action("knobsBtn666")}
   >
     {text("childrenText", "Hello Storybook")}
   </Button>

@@ -21,7 +21,7 @@ module.exports = {
     "builder": "webpack5"
   },
   webpackFinal: async (config) => {
-    // config.devtool = "source-map";
+    config.devtool = "source-map";
 		// config.module.rules.push({
 		// 	test: /\.(ts|tsx)$/,
 		// 	use: [
