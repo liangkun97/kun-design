@@ -1,40 +1,26 @@
 // import React from "react";
 import { action } from "@storybook/addon-actions";
-import Button, {
-  APPEARANCES,
-  AppearancesTypes,
-  SIZES,
-  SizesTypes,
-} from "./index";
-import {
-	withKnobs,
-	text,
-	boolean,
-	select,
-} from "@storybook/addon-knobs";
+import Button, { APPEARANCES, AppearancesTypes, SIZES, SizesTypes } from "./index";
+import { withKnobs, text, boolean, select } from "@storybook/addon-knobs";
 
 export default {
-  title: "通用 /Button",
-  component: Button,
-  decorators: [withKnobs],
+	title: "通用 /Button",
+	component: Button,
+	decorators: [withKnobs],
 };
 
 export const knobsBtn = () => (
-  <Button
-    size={select<SizesTypes>("size", SIZES, SIZES.medium)}
-    href={text("hrefText", "")}
-    isLink={boolean("isLink", false)}
-    loadingText={text("loadingTEXT", "I AM LOADING")}
-    isLoading={boolean("isLoading", false)}
-    disabled={boolean("disabled", false)}
-    appearance={select<AppearancesTypes>(
-      "APPEARANCES",
-      APPEARANCES,
-      APPEARANCES.primary
-    )}
-  >
-    {text("childrenText", "Hello Storybook")}
-  </Button>
+	<Button
+		size={select<SizesTypes>("size", SIZES, SIZES.medium)}
+		href={text("hrefText", "")}
+		isLink={boolean("isLink", false)}
+		loadingText={text("loadingTEXT", "I AM LOADING")}
+		isLoading={boolean("isLoading", false)}
+		disabled={boolean("disabled", false)}
+		appearance={select<AppearancesTypes>("APPEARANCES", APPEARANCES, APPEARANCES.primary)}
+	>
+		{text("childrenText", "Hello Storybook")}
+	</Button>
 );
 
 export const buttons = () => (
