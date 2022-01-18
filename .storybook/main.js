@@ -1,3 +1,4 @@
+const path = require("path");
 module.exports = {
   "stories": [
     "../src/**/*.stories.mdx",
@@ -19,16 +20,21 @@ module.exports = {
   "core": {
     "builder": "webpack5"
   },
-  // webpackFinal: async (config) => {
-	// 	config.module.rules.push({
-	// 		test: /\.(ts|tsx)$/,
-	// 		use: [
-	// 			{
-	// 				loader: require.resolve("react-docgen-typescript-loader"),
-	// 			},
-	// 		],
-	// 	});
-	// 	config.resolve.extensions.push(".ts", ".tsx");
-	// 	return config;
-	// },
+  webpackFinal: async (config) => {
+    // config.devtool = "source-map";
+		// config.module.rules.push({
+		// 	test: /\.(ts|tsx)$/,
+		// 	use: [
+		// 		{
+		// 			loader: require.resolve("react-docgen-typescript-loader"),
+		// 		},
+		// 	],
+		// });
+		// config.resolve.extensions.push(".ts", ".tsx");
+    config.resolve.alias = {
+      '@': path.resolve(__dirname, '../src'),
+      // '@shared': path.resolve(__dirname, '../src/shared')
+    }
+		return config;
+	},
 }
