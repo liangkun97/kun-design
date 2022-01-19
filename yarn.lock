@@ -1967,7 +1967,7 @@
     prop-types "^15.7.2"
     regenerator-runtime "^0.13.7"
 
-"@storybook/addons@6.4.13":
+"@storybook/addons@6.4.13", "@storybook/addons@^6.4.13":
   version "6.4.13"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-6.4.13.tgz#df35a7ad908018125eb817ec6a3af05fac09543a"
   integrity sha512-2oxZ/VOuXUpOvtKGy+fR1FNwyfaTkzKs9I6cZq2zbEGK2q/5x6rtczwNRm5PjK35At+VurMq0E+IHH10JO9vHw==
@@ -2665,7 +2665,7 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/theming@6.4.13":
+"@storybook/theming@6.4.13", "@storybook/theming@^6.4.13":
   version "6.4.13"
   resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-6.4.13.tgz#1a8aadeddb6c3a115f739aa1a4bbd7e65d4a3830"
   integrity sha512-oWRoNnvO4QnRnplZ74DVdU4k91eqw8y0Xqn6lzZBeC8hq6mYWldgfj1LZ24gJhVtEIa7ZKoyujGUygHaH8WXHw==

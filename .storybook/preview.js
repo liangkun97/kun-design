@@ -1,3 +1,6 @@
+import { themes } from '@storybook/theming';
+import kunDesignTheme from "./kunDesignTheme";
+
 export const parameters = {
   actions: {
     argTypesRegex: "^on[A-Z].*",
@@ -12,5 +15,8 @@ export const parameters = {
   dependencies: {
     withStoriesonly: true,
     hideEmpty: true
+  },
+  docs: {
+    theme: kunDesignTheme,
   },
 }
