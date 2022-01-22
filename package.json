@@ -35,7 +35,8 @@
     "prepare": "husky install",
     "coverage": "react-scripts test --coverage --watchAll=false",
     "pre-commit": "yarn test && npx lint-staged",
-    "coverall": "npm run coverage  && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+    "coverall": "npm run coverage  && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "plop": "plop"
   },
   "husky": {
     "hooks": {
@@ -47,6 +48,10 @@
       "prettier --write"
     ]
   },
+  "np": {
+		"yarn": false,
+		"contents": "dist"
+	},
   "browserslist": {
     "production": [
       "> 0.5%",
@@ -88,6 +93,8 @@
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.0",
     "lint-staged": "^12.1.7",
+    "np": "^7.6.0",
+    "plop": "^3.0.5",
     "react-docgen-typescript-loader": "^3.7.2",
     "styled-components": "^5.3.3",
     "typescript": "^4.5.4",

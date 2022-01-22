@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar, AvatarSize } from "./index";
+import Avatar, { AvatarSize } from "./index";
 import { withKnobs, text, boolean, select } from "@storybook/addon-knobs";
 
 export default {
@@ -11,9 +11,16 @@ type AvatarSizeType = keyof typeof AvatarSize;
 
 export const knobsAvatar = () => (
   <Avatar
-    size={select<AvatarSizeType>("size", Object.keys(AvatarSize) as AvatarSizeType[], "medium")}
+    size={select<AvatarSizeType>(
+      "size",
+      Object.keys(AvatarSize) as AvatarSizeType[],
+      "medium"
+    )}
     username={text("username", "kun-design")}
-    src={text("src", "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png")}
+    src={text(
+      "src",
+      "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+    )}
     isLoading={boolean("isLoading", false)}
   />
 );
