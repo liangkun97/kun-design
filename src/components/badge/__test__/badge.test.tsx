@@ -7,7 +7,7 @@ const testonClick = jest.fn();
 
 const testThemeFunc = (status: BadgeProps["status"]) => {
   cleanup();
-  let wrapper = render(<Badge status={status}>666</Badge>);
+  const wrapper = render(<Badge status={status}>666</Badge>);
   const text = wrapper.getByText("666");
   expect(text).toHaveStyle(`color: ${badgeColor[status]}`);
   expect(text).toHaveStyle(`background: ${badgeBackground[status]}`);
@@ -15,14 +15,14 @@ const testThemeFunc = (status: BadgeProps["status"]) => {
 
 describe("test Badge component", () => {
   it("should render default style", () => {
-    let wrapper = render(<Badge>111</Badge>);
+    const wrapper = render(<Badge>111</Badge>);
     expect(wrapper).toMatchSnapshot();
     const text = wrapper.getByText("111");
     expect(text).toHaveStyle(`color: ${badgeColor.negative}`);
     expect(text).toHaveStyle(`background: ${badgeBackground.negative}`);
   });
   it("should render corrent attr", () => {
-    let wrapper = render(
+    const wrapper = render(
       <Badge className="testclass" onClick={testonClick}>
         attr
       </Badge>

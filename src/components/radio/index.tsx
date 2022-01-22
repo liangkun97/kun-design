@@ -140,12 +140,7 @@ function Radio(props: RadioProps) {
   return (
     <RadioWrapper className={wrapperClass} style={style}>
       <Label disabled={disabled}>
-        <Input
-          {...restProps}
-          role="radio"
-          aria-invalid={!!error}
-          type="radio"
-        />
+        <Input {...restProps} role="radio" type="radio" />
         <span>
           <OptionalText hideLabel={hideLabel}>{label}</OptionalText>
         </span>
