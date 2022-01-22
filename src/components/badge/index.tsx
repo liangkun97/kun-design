@@ -1,13 +1,6 @@
-import React, {
-  HTMLAttributes,
-  PropsWithChildren,
-  ReactNode,
-  useMemo,
-} from "react";
+import React, { HTMLAttributes, PropsWithChildren } from "react";
 import styled, { css } from "styled-components";
 import { color, background, typography } from "../../shared/styles";
-import { darken, rgba, opacify } from "polished";
-import { easing } from "../../shared/animation";
 
 export const badgeColor = {
   positive: color.positive,

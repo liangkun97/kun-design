@@ -1,6 +1,11 @@
 // import React from "react";
 import { action } from "@storybook/addon-actions";
-import Button, { APPEARANCES, AppearancesTypes, SIZES, SizesTypes } from "./index";
+import Button, {
+  APPEARANCES,
+  AppearancesTypes,
+  SIZES,
+  SizesTypes,
+} from "./index";
 import { withKnobs, text, boolean, select } from "@storybook/addon-knobs";
 
 export default {
@@ -17,7 +22,11 @@ export const knobsBtn = () => (
     loadingText={text("loadingTEXT", "I AM LOADING")}
     isLoading={boolean("isLoading", false)}
     disabled={boolean("disabled", false)}
-    appearance={select<AppearancesTypes>("APPEARANCES", APPEARANCES, APPEARANCES.primary)}
+    appearance={select<AppearancesTypes>(
+      "APPEARANCES",
+      APPEARANCES,
+      APPEARANCES.primary
+    )}
     onClick={action("knobsBtn666")}
   >
     {text("childrenText", "Hello Storybook")}

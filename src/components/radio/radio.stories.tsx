@@ -87,7 +87,7 @@ function ParentControl() {
   const onClick = (e: React.MouseEvent<HTMLInputElement, MouseEvent>) => {
     const target = e.target as HTMLInputElement;
     const index = target.value as unknown as number;
-    let newArr = new Array(5).fill(false);
+    const newArr = new Array(5).fill(false);
     newArr[index] = true;
     setState(newArr);
   };
@@ -98,35 +98,35 @@ function ParentControl() {
         onClick={onClick}
         value={0}
         checked={state[0]}
-        onChange={() => {}}
+        onChange={action(state[0])}
       />
       <Radio
         label="banana"
         onClick={onClick}
         value={1}
         checked={state[1]}
-        onChange={() => {}}
+        onChange={action(state[1])}
       />
       <Radio
         label="pear"
         onClick={onClick}
         value={2}
         checked={state[2]}
-        onChange={() => {}}
+        onChange={action(state[2])}
       />
       <Radio
         label="mongo"
         onClick={onClick}
         value={3}
         checked={state[3]}
-        onChange={() => {}}
+        onChange={action(state[3])}
       />
       <Radio
         label="watermelon"
         onClick={onClick}
         value={4}
         checked={state[4]}
-        onChange={() => {}}
+        onChange={action(state[4])}
       />
     </div>
   );

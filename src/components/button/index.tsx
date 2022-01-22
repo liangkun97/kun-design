@@ -89,7 +89,8 @@ const StyledButton = styled.button<ButtonProps>`
   cursor: pointer;
   display: inline-block;
   overflow: hidden;
-  padding: ${(props) => (props.size === SIZES.small ? "8px 16px" : "13px 20px")};
+  padding: ${(props) =>
+    props.size === SIZES.small ? "8px 16px" : "13px 20px"};
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -102,7 +103,8 @@ const StyledButton = styled.button<ButtonProps>`
   margin: 0;
   background: transparent;
 
-  font-size: ${(props) => (props.size === SIZES.small ? typography.size.s1 : typography.size.s2)}px;
+  font-size: ${(props) =>
+    props.size === SIZES.small ? typography.size.s1 : typography.size.s2}px;
   font-weight: ${typography.weight.extrabold};
   line-height: 1;
 
@@ -277,7 +279,9 @@ const StyledButton = styled.button<ButtonProps>`
         }
 
         &:active:focus:hover {
-          ${/* This prevents the semi-transparent border from appearing atop the background */ ""}
+          ${
+            /* This prevents the semi-transparent border from appearing atop the background */ ""
+          }
           background: ${opacify(0.05, color.border)};
           box-shadow:  ${rgba(color.darkest, 0.15)} 0 1px 9px 2px;
         }
@@ -311,10 +315,16 @@ const StyledButton = styled.button<ButtonProps>`
           color: ${color.lightest};
         }
         &:focus {
-          box-shadow: ${color.primary} 0 0 0 1px inset, ${rgba(color.primary, 0.4)} 0 1px 9px 2px;
+          box-shadow: ${color.primary} 0 0 0 1px inset, ${rgba(
+      color.primary,
+      0.4
+    )} 0 1px 9px 2px;
         }
         &:focus:hover {
-          box-shadow: ${color.primary} 0 0 0 1px inset, ${rgba(color.primary, 0.2)} 0 8px 18px 0px;
+          box-shadow: ${color.primary} 0 0 0 1px inset, ${rgba(
+      color.primary,
+      0.2
+    )} 0 8px 18px 0px;
         }
     `};
 

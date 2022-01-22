@@ -33,7 +33,9 @@ describe("test Button component", () => {
     expect(ele).not.toHaveAttribute("isdisabled");
     expect(ele).not.toHaveAttribute("isLinked");
     //正常添加classname
-    expect(ele.getAttribute("class")?.split(" ").includes("testprops")).toEqual(true);
+    expect(ele.getAttribute("class")?.split(" ").includes("testprops")).toEqual(
+      true
+    );
     //正常click
     fireEvent.click(ele);
     expect(defaultProps.onClick).toHaveBeenCalled();

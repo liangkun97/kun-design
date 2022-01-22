@@ -1,13 +1,7 @@
 import React from "react";
 import Icon from "../icon";
 import Badge, { badgeColor, BadgeProps } from "./index";
-import {
-  withKnobs,
-  text,
-  boolean,
-  color,
-  select,
-} from "@storybook/addon-knobs";
+import { withKnobs, text, select } from "@storybook/addon-knobs";
 
 export default {
   title: "数据展示 /Badge",
