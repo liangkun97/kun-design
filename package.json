@@ -10,6 +10,8 @@
   "files": [
     "dist"
   ],
+  "main": "dist/kun-design.js",
+  "module": "dist/kun-design.modern.js",
   "repository": "https://github.com/liangkun97/kun-design",
   "dependencies": {
     "@types/jest": "^27.4.0",
@@ -25,7 +27,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "tsc -p tsconfig.json",
+    "build": "microbundle build --tsconfig tsconfig.json --jsx React.createElement  --compress=false",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
@@ -49,9 +51,9 @@
     ]
   },
   "np": {
-		"yarn": false,
-		"contents": "dist"
-	},
+    "yarn": false,
+    "contents": "dist"
+  },
   "browserslist": {
     "production": [
       "> 0.5%",
@@ -93,6 +95,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.0",
     "lint-staged": "^12.1.7",
+    "microbundle": "^0.14.2",
     "np": "^7.6.0",
     "plop": "^3.0.5",
     "react-docgen-typescript-loader": "^3.7.2",
