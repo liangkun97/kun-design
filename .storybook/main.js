@@ -30,6 +30,9 @@ module.exports = {
 		// 	],
 		// });
 		// config.resolve.extensions.push(".ts", ".tsx");
-		// return config;
+    // config.resolve.alias = {
+    //   "./prerequisite-tasks": path.resolve(__dirname, "src/assets/js/prerequisite-tasks.js")
+    // };
+	// 	return config;
 	// },
 }

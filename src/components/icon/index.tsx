@@ -22,10 +22,16 @@ export interface IconProps {
   color?: string;
 }
 
-export function Icon(props: IconProps) {
+function Icon(props: IconProps) {
   const { block, icon, color } = props;
   return (
-    <Svg viewBox="0 0 1024 1024" width={20} height={20} block={block} {...props}>
+    <Svg
+      viewBox="0 0 1024 1024"
+      width={20}
+      height={20}
+      block={block}
+      {...props}
+    >
       <Path d={icons[icon]} color={color} />
     </Svg>
   );
@@ -35,3 +41,5 @@ Icon.defaultProps = {
   block: false,
   color: "black",
 };
+
+export default Icon;

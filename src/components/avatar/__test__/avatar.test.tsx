@@ -1,17 +1,17 @@
 import React from "react";
 import { render, cleanup } from "@testing-library/react";
-import { Avatar, AvatarSize } from "../index";
+import Avatar, { AvatarSize } from "../index";
 
 describe("test Avatar component", () => {
-  it("it should render default avatar", () => {
-    let wrapper = render(<Avatar username="kun" data-testid="avatar-div" />);
+  it("should render default avatar", () => {
+    const wrapper = render(<Avatar username="kun" data-testid="avatar-div" />);
     expect(wrapper).toMatchSnapshot();
-    let div = wrapper.getByTestId("avatar-div");
+    const div = wrapper.getByTestId("avatar-div");
     expect(div).toBeInTheDocument();
-    let username = wrapper.getByText("k");
+    const username = wrapper.getByText("k");
     expect(username).toBeTruthy();
   });
-  it("it should render correct size", () => {
+  it("should render correct size", () => {
     let wrapper = render(<Avatar data-testid="avatar-div" />);
     let div = wrapper.getByTestId("avatar-div");
     expect(div).toHaveStyle(`height:${AvatarSize.medium}px`);
@@ -60,13 +60,21 @@ describe("test Avatar component", () => {
     expect(svg).toBeVisible();
     cleanup();
     wrapper = render(
-      <Avatar isLoading username="123" src="/" size="tiny" data-testid="avatar-div" />
+      <Avatar
+        isLoading
+        username="123"
+        src="/"
+        size="tiny"
+        data-testid="avatar-div"
+      />
     );
     svg = wrapper.getByTestId("avatar-div");
     expect(svg).toBeVisible();
   });
   it("should correct img", () => {
-    let wrapper = render(<Avatar src="www.test.com" data-testid="avatar-div" />);
+    let wrapper = render(
+      <Avatar src="www.test.com" data-testid="avatar-div" />
+    );
     let img = wrapper.getByTestId("avatar-img");
     expect(img.tagName).toEqual("IMG");
     expect(img).toHaveStyle("width:100%");
@@ -74,16 +82,22 @@ describe("test Avatar component", () => {
     expect(img).toHaveAttribute("alt", "loading");
     cleanup();
     wrapper = render(
-      <Avatar src="www.liang-kun.cn" username="liang-kun" data-testid="avatar-div" />
+      <Avatar
+        src="www.liang-kun.cn"
+        username="liang-kun"
+        data-testid="avatar-div"
+      />
     );
     img = wrapper.getByTestId("avatar-img");
     expect(img).toHaveAttribute("src", "www.liang-kun.cn");
     expect(img).toHaveAttribute("alt", "liang-kun");
   });
   it("should render correct username", () => {
-    let wrapper = render(<Avatar username="liang-kun" data-testid="avatar-div" />);
+    let wrapper = render(
+      <Avatar username="liang-kun" data-testid="avatar-div" />
+    );
     expect(wrapper).toMatchSnapshot();
-    let div = wrapper.getByTestId("avatar-div");
+    const div = wrapper.getByTestId("avatar-div");
     expect(div).toHaveStyle("text-transform:uppercase");
     let username = wrapper.getByText("l");
     expect(username).toBeVisible();

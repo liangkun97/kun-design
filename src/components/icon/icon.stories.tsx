@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon, IconProps } from "./index";
+import Icon, { IconProps } from "./index";
 import { withKnobs, color, select } from "@storybook/addon-knobs";
 import styled from "styled-components";
 import { icons } from "../../shared/icons";
@@ -12,7 +12,11 @@ export default {
 
 export const knobsIcon = () => (
   <Icon
-    icon={select<IconProps["icon"]>("icons", Object.keys(icons) as IconProps["icon"][], "bookmark")}
+    icon={select<IconProps["icon"]>(
+      "icons",
+      Object.keys(icons) as IconProps["icon"][],
+      "bookmark"
+    )}
     color={color("color", "black")}
   />
 );
