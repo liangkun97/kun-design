@@ -22,7 +22,7 @@ export interface IconProps {
   color?: string;
 }
 
-function Icon(props: IconProps) {
+export function Icon(props: IconProps) {
   const { block, icon, color } = props;
   return (
     <Svg

@@ -10,8 +10,7 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-viewport",
     "@storybook/addon-knobs",
-		"@storybook/addon-docs",
-    // { name: "@storybook/addon-docs", options: { configureJSX: true } },
+    { name: "@storybook/addon-docs", options: { configureJSX: true } },
     "@storybook/addon-essentials",
 		"@storybook/addon-a11y",
 		"@storybook/addon-storysource",
@@ -20,19 +19,27 @@ module.exports = {
   "core": {
     "builder": "webpack5"
   },
-  // webpackFinal: async (config) => {
+  webpackFinal: async (config) => {
 		// config.module.rules.push({
 		// 	test: /\.(ts|tsx)$/,
 		// 	use: [
 		// 		{
 		// 			loader: require.resolve("react-docgen-typescript-loader"),
+		// 			options: {
+		// 				shouldExtractLiteralValuesFromEnum: true,
+		// 				propFilter: (prop) => {
+		// 					if (prop.parent) {
+		// 						return !prop.parent.fileName.includes(
+		// 							"node_modules"
+		// 						);
+		// 					}
+		// 					return true;
+		// 				},
+		// 			},
 		// 		},
 		// 	],
 		// });
-		// config.resolve.extensions.push(".ts", ".tsx");
-    // config.resolve.alias = {
-    //   "./prerequisite-tasks": path.resolve(__dirname, "src/assets/js/prerequisite-tasks.js")
-    // };
-	// 	return config;
-	// },
+		config.resolve.extensions.push(".ts", ".tsx");
+		return config;
+	},
 }

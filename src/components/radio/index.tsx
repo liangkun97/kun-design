@@ -126,7 +126,7 @@ export interface RadioProps
   wrapperClass?: string;
 }
 
-function Radio(props: RadioProps) {
+export function Radio(props: RadioProps) {
   const {
     wrapperClass,
     error,
